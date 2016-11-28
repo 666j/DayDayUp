@@ -89,6 +89,7 @@ class MyProps extends Component{
 		
 	}
 }
+//今天什么也没有干
 const styles = StyleSheet.create({
   container: {
     flex: 1,
