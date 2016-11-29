@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#p1{
+				-moz-box-flex:1.0; /* Firefox */
+				-webkit-box-flex:1.0; /* Safari and Chrome */
+				box-flex:1.0;
+				border:1px solid blue;
+			}
+			#p2{
+				-moz-box-flex:2.0; /* Firefox */
+				-webkit-box-flex:2.0; /* Safari and Chrome */
+				box-flex:2.0;
+				border:1px solid red;
+			}
+			div{
+			display:-moz-box; /* Firefox */
+			display:-webkit-box; /* Safari and Chrome */
+			display:box;
+			width:300px;
+			border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p id="p1">hello</p>
+			<p id="p2">world</p>
+		</div>
+	</body>
+</html>
