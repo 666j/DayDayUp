@@ -10,7 +10,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  TextInput
 } from 'react-native';
 
 export default class AwesomeProject extends Component {
@@ -87,6 +88,17 @@ class MyProps extends Component{
 			</View>
 		);
 		
+	}
+}
+
+class InputTest extends Component{
+	render(){
+		return(
+			<View style = {{padding:10}}>
+			<TextInput style = {{height:40}}
+			placeholder = "type here to transate"
+			onChangeText = {(text)=>this.setState({})}
+		)
 	}
 }
 //今天什么也没有干
