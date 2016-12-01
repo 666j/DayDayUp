@@ -85,11 +85,13 @@ class MyProps extends Component{
 				<PropsTest name = "6j"/>
 				<Blink text ="hell0"/>
 				<FlexDimensionsBasics/>
+				<InputTest text ="my hhh"/>
 			</View>
 		);
 		
 	}
 }
+
 
 class InputTest extends Component{
 	constructor(props) {
@@ -99,12 +101,12 @@ class InputTest extends Component{
 	render(){
 		return(
 			<View style = {{padding:10}}>
-			<TextInput style = {{height:40}}
-			placeholder = "type here to transate"
-			onChangeText = {(text)=>this.setState({text})}/>
-			<Text style = {{padding:10,fontSize:42}}>
-			{this.state.text.split(' ').map(word) =>word&& '🍕').join(' ')
-			}</Text>
+				<TextInput style = {{height:40}}
+				placeholder = "type here to transate"
+				onChangeText = {(text)=>this.setState({text})}/>
+				<Text style = {{padding:10,fontSize:42}}>
+				{this.state.text.split(' ').map(word) =>word&& '🍕').join(' ')
+				}</Text>
 			<View>
 		)
 	}
