@@ -17,21 +17,204 @@
 				box-flex:2.0;
 				border:1px solid red;
 			}
-			div{
-			display:-moz-box; /* Firefox */
-			display:-webkit-box; /* Safari and Chrome */
+			/*div{
+			display:-moz-box; 
+			display:-webkit-box; 
 			display:box;
 			width:300px;
 			border:1px solid black;
+			}*/
+			.box{
+				display: flex;
+				align-items: baseline;
+			   
+			    flex-direction: row;
+			    flex-wrap: wrap;
+			   
+			    justify-content: space-around;
+			    align-content: center;
 			}
+			
+			.item{
+				
+			}
+			.item:nth-child(1){
+				order: 2;
+			}
+			.item:nth-child(2){
+				order: 1;
+			}
+			.crapbox{
+				display: flex;
+				width: 100px;
+				height: 100px;
+				margin: 20px;
+				padding: 10px;
+				border: 6px solid #f1f1f1;
+				border-radius: 5px;
+				box-shadow: 5px 5px 5px #a1a1a1;
+				/*justify-content: center;
+				align-items: center;*/
+				 justify-content: space-between;
+				 flex-wrap: wrap;
+			}
+			.crapitem{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #333;
+				box-shadow: 2px 2px 1px #a1a1a1;
+				
+			}
+			.crapbox1{
+				justify-content: center;
+				align-items: center;
+			}
+			.crapbox2 .crapitem:nth-child(2){
+				align-self: flex-end;
+			}
+			.crapbox3 .crapitem:nth-child(2){
+				align-self: center;
+			}
+			.crapbox3 .crapitem:nth-child(3){
+				align-self: flex-end;
+			}
+			.crapbox4{
+				justify-content: flex-end;
+				align-content: space-between;
+				flex-wrap: wrap;
+				align-items: flex-start;
+			}
+			/*.crapbox4 .crapitem:nth-child(2){
+				align-self: flex-end
+			}
+			.crapbox4 .crapitem:nth-child(3){
+				align-self: flex-start;
+			}
+			.crapbox4 .crapitem:nth-child(4){
+				align-self: flex-end;
+			}*/
+			/*.crapbox5 .crapitem:nth-child(3){
+				align-self: flex-end;
+			}*/
+			
+			.column{
+				flex-basis: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			.crapbox5{
+				width: 100px;
+				height: 100px;
+				margin: 20px;
+				padding: 10px;
+				border: 6px solid #f1f1f1;
+				border-radius: 5px;
+				box-shadow: 5px 5px 5px #a1a1a1;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.crapbox5 .column{
+				display: flex;
+				flex-basis: 100%;
+			}
+			.crapbox5 .column:nth-child(2){
+				justify-content: center;
+			}
+			.crapbox5 .column:nth-child(3){
+				justify-content: space-between;
+			}
+			.grid{
+				display: flex;
+			}
+			.grid-cell{
+				flex: 1;
+				background: #F1F1F1;
+				line-height: 30px;
+				height: 30px;
+				border: 1px #A1A1A1 solid;
+			}
+			.grid-cell.u-lof2{
+				flex: 0 0 50%;
+			}
+			.grid-cell.u-lof3{
+				flex: 0 0 33.3%;
+			}
+			/*.grid-cell:nth-child(2){
+				flex: 3;
+			}*/
+			
+			
 		</style>
 	</head>
 	<body>
-		<div>
+		
+		<!--<div class="box">
+			<img class="item"src="img/default.jpg" />
+			<img class="item"src="img/img4.jpg" />
+			<img class="item"src="img/img2.jpg" />
+			<img class="item"src="img/img3.jpg" />
+			<img class="item"src="img/menber3.jpg" />
+			<img class="item"src="img/menber4.jpg" />
+			<img class="item"src="img/menber5.jpg" />
+			<img class="item"src="img/img5.jpg" />
+			<img class="item"src="img/user2.jpg" />
+			<img class="item"src="img/audilogo.png" />
+		</div>-->
+		<div class="crapbox crapbox1">
+			<span class="crapitem"></span>
+			
+		</div>
+		<div class="crapbox2 crapbox ">
+			<span class="crapitem"></span>
+			<span class="crapitem"></span>
+		</div>
+		<div class="crapbox3 crapbox ">
+			<span class="crapitem"></span>
+			<span class="crapitem"></span>
+			<span class="crapitem"></span>
+		</div>
+		<div class="crapbox4 crapbox ">
+			<div class="column">
+				<span class="crapitem"></span>
+				<span class="crapitem"></span>
+			</div>
+			<div class="column">
+				<span class="crapitem"></span>
+				<span class="crapitem"></span>
+			</div>
+		</div>
+		<div class=" crapbox5 ">
+			<div class="column">
+				<span class="crapitem"></span>
+				<span class="crapitem"></span>
+			</div>
+			<div class="column">
+				<span class="crapitem"></span>
+				
+			</div>
+			<div class="column">
+				<span class="crapitem"></span>
+				<span class="crapitem"></span>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="grid-cell">
+				1
+			</div>
+			<div class="grid-cell u-lof2">
+				2
+			</div>
+			<div class="grid-cell u-lof3">
+				3
+			</div>
+			
+		</div>
+		<!--<div>
 			<p id="p1">hello</p>
 			<p id="p2">world</p>
 		</div>
-		<div id="testStyle" style="color: #ff0;"  style="color: #f00;">hhhh</div>
+		<div id="testStyle" style="color: #ff0;"  style="color: #f00;">hhhh</div>-->
 		<script>
 			$("#testStyle").css("font-size","15px");
 		</script>

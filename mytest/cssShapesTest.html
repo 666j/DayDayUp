@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加上小图标</title>
+		<link rel="icon" type="image/gifs" href="img/pie_icon.gif"/> 
+		<link rel="stylesheet" type="text/css" title="blue" href="../css/model.css" />
+<link rel="alternate stylesheet" type="text/css" title="red" href="../css/model.css" />
+		<script  type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<style>
+			.text_image{
+				float: left;
+				width: 429px;
+				shape-outside: circle(50%);
+				
+
+			}
+		@supports(mix-blend-mode: overlay) {
+			.artwork img {
+				mix-blend-mode: overlay;
+				background-image:url(img/张靓颖.jpg);
+			}
+			}
+			@supports not (mix-blend-mode: overlay) {
+			.artwork img {
+				opacity: 0.5;
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<div class="contanier">
+			
+				<img class = "text_image" src="img/default.jpg"/>
+				<p>大家的世界里，Web布局都是中规中矩，你所看到的排版方式都是矩形的。
+					那是因为，Web中的任何一个元素都是矩形盒子，哪怕你的元素外形看上去是
+					个圆（或者其它图形）。这也造成了布局都是矩形方块的，要做到类似杂志，
+					报纸这样流体式的布
+					局是非常困难的。甚至说是不可能的。比如要实现下面这样的一个布局：
+					仅仅上面的几行代码就实现了上面示例的效果，你是不是觉得不可思议。
+					以前要实现这样的一个效果是多么的难，现在使用shape-outside这样的一个属
+					性就轻而易举的完成了。
+					当然，除了配合图片之外，还可以配合CSS绘制的图形，
+					也能达到类似的效果，比如下面的这个示例，采用一个伪元素:
+					:before绘制一个圆，然后结合shape-outside：</p>
+		
+		</div>
+		<div class="artwork">
+			<img src="img/张杰.jpg"/>
+		</div>
+	</body>
+</html>

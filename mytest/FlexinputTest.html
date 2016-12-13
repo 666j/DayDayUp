@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex布局输入框</title>
+		<style>
+			.InputAddOn{
+				display: flex;
+				/*flex-wrap: wrap;*/
+			}
+			/*.InputAddOn-item{
+				flex: 0 0 100%;
+			}*/
+			.InputAddOn-field{
+				flex: 1;
+			}
+			.Media{
+				display: flex;
+				align-items: flex-start;
+			}
+			
+			.Media-figure{
+				margin-right: 1em;
+			}
+			.Media-body {
+			  flex: 1;
+			}
+			.Site{
+				display: flex;
+				min-height: 100vh;
+				flex-direction: column;
+			}
+			.Site-content{
+				flex: 1;
+			}
+		</style>
+	</head>
+	<body class="Site">
+		<!--<div class="InputAddOn">
+		  <span class="InputAddOn-item">输入框</span>
+		  <input class="InputAddOn-field">
+		  <button class="InputAddOn-item">...</button>
+		</div>-->
+		<body >
+		  <header>...</header>
+		  <div class="Site-content">
+		  	<div class="Media">
+			  <img class="Media-figure" src="img/user2.jpg" alt="头像">
+			  <p class="Media-body">
+			  有时，主栏的左侧或右侧，需要添加一个图片栏。
+			  有时，主栏的左侧或右侧，需要添加一个图片栏。
+			  有时，主栏的左侧或右侧，需要添加一个图片栏。
+			  有时，主栏的左侧或右侧，需要添加一个图片栏。
+			  有时，主栏的左侧或右侧，需要添加一个图片栏。
+			 </p>
+		  </div>
+		  <footer style="height: 20px;background: #122B40;">...</footer>
+		</body>
+		
+		</div>
+	</body>
+</html>

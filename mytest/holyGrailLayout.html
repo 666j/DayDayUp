@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>holyGrail Layoout</title>
+		<style>
+		body{
+			height: 600px;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			.holyGrail{
+				display: flex;
+				flex-wrap: wrap;
+				height: 100%;
+				flex-direction:row;
+			}
+			#footer,#header{
+				flex: 0 0 100%;
+				height: 15%;
+				background: #A1A1A1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.content-wrap{
+				flex: 0 0 100%;
+				display: flex;
+				justify-content: space-between;
+				height: 70%;
+				/*flex-direction: column;*/
+			}
+			.content{
+				align-self: center;
+				background: #d1d1d1;
+				flex: 0 0 50%;
+				height: 100%;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				order: 2;
+				
+			}
+			.holy-nav{
+				align-self: flex-start;
+				background: #5BC0DE;
+				flex: 0 0 25%;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				display: flex;
+				order: 0;
+			}
+			.holy-ads{
+				align-self: flex-end;
+				background: #C9E2B3;
+				order: 3;
+				flex: 0 0 25%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			@media (max-width: 768px) {
+			  .content-wrap {
+			    flex-direction: column;
+			    flex: 1;
+			    height: 70%;
+			  }
+			  .holy-nav,
+			  .holy-ads,
+			  .content {
+			    flex: auto;
+			    width: 100%;
+			   
+			  }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="holyGrail">
+			<header id="header"><p>#header</p></header>
+			<div class="content-wrap">
+				<div class="content"><p>#content</p></div>
+				<nav class="holy-nav"><p>nav</p></nav>
+				<aside class="holy-ads"><p>ads</p></aside>
+			</div>
+			<footer id="footer"><p>#footer</p></footer>
+		</div>
+	</body>
+</html>
